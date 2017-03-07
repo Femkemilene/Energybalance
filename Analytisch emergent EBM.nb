@@ -1,0 +1,163 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4777,        154]
+NotebookOptionsPosition[      4086,        125]
+NotebookOutlinePosition[      4432,        140]
+CellTagsIndexPosition[      4389,        137]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Q0", "=", "342"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"alpha", "=", "0.3"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"G", "=", 
+   RowBox[{"1.5", "*", 
+    RowBox[{"10", "^", "2"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"epsilon", "=", "1.0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sigma", "=", 
+   RowBox[{"5.67", "*", 
+    RowBox[{"10", "^", 
+     RowBox[{"-", "8"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Teqe", "[", 
+   RowBox[{"alpha_", ",", "Q0_", ",", "C_"}], "]"}], " ", ":=", " ", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"Q0", "*", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", "alpha"}], ")"}]}], "+", "G", "+", "C"}], ")"}], 
+     "/", 
+     RowBox[{"(", 
+      RowBox[{"epsilon", "*", "sigma"}], ")"}]}], ")"}], "^", 
+   RowBox[{"(", 
+    RowBox[{"1", "/", "4"}], ")"}]}]}]}], "Input",
+ CellChangeTimes->{{3.6969436553070354`*^9, 3.696943744905645*^9}, {
+  3.6969437947284813`*^9, 3.6969438424387493`*^9}, {3.696943899060177*^9, 
+  3.6969439080761657`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Seasonal sensitivity", "Subsection",
+ CellChangeTimes->{{3.696943931037526*^9, 3.6969439343384237`*^9}, {
+  3.6970913731709213`*^9, 3.69709137574937*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"lowabl", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"Teqe", "[", 
+    RowBox[{"0.3", ",", "342", ",", "0"}], "]"}], "-", 
+   RowBox[{"Teqe", "[", 
+    RowBox[{"0.3", ",", "352", ",", "0"}], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"highalb", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"Teqe", "[", 
+    RowBox[{"0.5", ",", "342", ",", "0"}], "]"}], "-", 
+   RowBox[{"Teqe", "[", 
+    RowBox[{"0.5", ",", "352", ",", "0"}], "]"}]}]}]}], "Input",
+ CellChangeTimes->{{3.696943826001397*^9, 3.6969438604588013`*^9}, {
+  3.6969439114319663`*^9, 3.6969439128302183`*^9}, {3.696943954836932*^9, 
+  3.696944005715236*^9}, {3.6970913682817845`*^9, 3.697091369129098*^9}}],
+
+Cell[BoxData[
+ RowBox[{"-", "1.28510407712713`"}]], "Output",
+ CellChangeTimes->{{3.6969438560869026`*^9, 3.696943860806087*^9}, {
+   3.696943977150362*^9, 3.6969440064367943`*^9}, 3.69709137762848*^9}],
+
+Cell[BoxData[
+ RowBox[{"-", "1.061974792677006`"}]], "Output",
+ CellChangeTimes->{{3.6969438560869026`*^9, 3.696943860806087*^9}, {
+   3.696943977150362*^9, 3.6969440064367943`*^9}, 3.697091377630534*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Climate sensitivity", "Subsection",
+ CellChangeTimes->{{3.6969439434556017`*^9, 3.6969439459387045`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"lowalb", "=", 
+  RowBox[{
+   RowBox[{"Teqe", "[", 
+    RowBox[{"0.3", ",", "342", ",", "30"}], "]"}], "-", 
+   RowBox[{"Teqe", "[", 
+    RowBox[{"0.3", ",", "342", ",", "0"}], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"highalb", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"Teqe", "[", 
+    RowBox[{"0.5", ",", "342", ",", "30"}], "]"}], "-", 
+   RowBox[{"Teqe", "[", 
+    RowBox[{"0.5", ",", "342", ",", "0"}], "]"}]}]}]}], "Input",
+ CellChangeTimes->{{3.6969438634742603`*^9, 3.6969438683623385`*^9}, 
+   3.696943922631912*^9, {3.696944021967787*^9, 3.6969440750597477`*^9}, {
+   3.697091419895836*^9, 3.697091420812502*^9}}],
+
+Cell[BoxData["5.391230703481426`"], "Output",
+ CellChangeTimes->{3.696944076022657*^9, 3.697091421488115*^9}],
+
+Cell[BoxData["6.195844812981306`"], "Output",
+ CellChangeTimes->{3.696944076022657*^9, 3.6970914214911175`*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1496, 846},
+WindowMargins->{{-9, Automatic}, {Automatic, -9}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (December 4, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1139, 34, 132, "Input"],
+Cell[CellGroupData[{
+Cell[1722, 58, 160, 2, 49, "Subsection"],
+Cell[CellGroupData[{
+Cell[1907, 64, 680, 15, 52, "Input"],
+Cell[2590, 81, 202, 3, 31, "Output"],
+Cell[2795, 86, 204, 3, 31, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3048, 95, 111, 1, 49, "Subsection"],
+Cell[CellGroupData[{
+Cell[3184, 100, 648, 15, 52, "Input"],
+Cell[3835, 117, 109, 1, 31, "Output"],
+Cell[3947, 120, 111, 1, 31, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
